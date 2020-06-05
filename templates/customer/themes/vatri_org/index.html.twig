@@ -1,0 +1,13 @@
+{% extends 'customer/themes/vatri_org/base.html.twig' %}
+
+{% block title %}Hello vatri.org{% endblock %}
+
+{% block body %}
+    {% if isTokenExpired %}
+
+        <h1>TOKEN EXPIRED!</h1>
+        <a href="{{ loginUrl }}">
+            Please Login
+        </a>
+    {% endif %}
+{% endblock %}

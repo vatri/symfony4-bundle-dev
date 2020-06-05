@@ -1,0 +1,22 @@
+# Read the documentation: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html
+fos_ck_editor:
+  configs:
+    my_config:
+      # toolbar: "full"
+      # toolbar: "standard"
+      # https://documentation.bloomreach.com/library/concepts/document-types/html-fields/ckeditor-toolbar-items.html
+      toolbar: [
+        ["Source", 'Cut','Copy','Paste', 'PasteFromWord', 'Maximize'] , 
+        ['Link', 'Image', 'filebrowser', 'Table', 'HorizontalRule', 'SpecialChar' ],
+        [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', 'Blockquote', 'RemoveFormat'],
+        ['JustifyLeft', 'JustifyCenter', 'JustifyRight','Indent','Outdent'],
+        ['NumberedList', 'BulletedList'],
+        ['Styles','Format', 'TextColor', 'BGColor','-', 'Templates'] ]
+      filebrowserBrowseRoute: 'file_browse_post'
+      # # filebrowserBrowseRoute:           "my_route"
+      # filebrowserBrowseRouteParameters: { slug: "file_browse_post" }
+      # filebrowserBrowseRouteType:       0
+
+twig:
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'

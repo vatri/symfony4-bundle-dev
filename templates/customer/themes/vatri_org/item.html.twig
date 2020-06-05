@@ -1,0 +1,11 @@
+{% extends 'customer/themes/vatri_org/base.html.twig' %}
+
+{% block title %}{{ item.title }}{% endblock %}
+
+{% block body %}
+
+    <h1>{{ item.title }}</h1>
+
+    {{ item.content | raw }}
+
+{% endblock %}
